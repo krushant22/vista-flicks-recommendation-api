@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: vista-flicks-recommendation-api
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: MONGO_URI
+        sync: false
+      - key: DB_NAME
+        sync: false
